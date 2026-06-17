@@ -27,10 +27,15 @@ function setupCollapsibleSections() {
   });
 }
 
-// Restore the visitor's previously chosen language on load.
+// Restore language: URL param (?lang=fr/en) takes priority, then localStorage, then default fr.
 document.addEventListener('DOMContentLoaded', () => {
   let lang = 'fr';
-  try { lang = localStorage.getItem('budget-lang') || 'fr'; } catch (e) {}
+  const urlLang = new URLSearchParams(window.location.search).get('lang');
+  if (urlLang === 'fr' || urlLang === 'en') {
+    lang = urlLang;
+  } else {
+    try { lang = localStorage.getItem('budget-lang') || 'fr'; } catch (e) {}
+  }
   setLang(lang);
   setupCollapsibleSections();
 });
