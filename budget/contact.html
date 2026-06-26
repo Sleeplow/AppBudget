@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-app="budget">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact &amp; signaler un bug — Budget App</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
 
 <header>
+  <div class="lang-switch" role="group" aria-label="Langue / Language">
+    <button class="active" onclick="setLang('fr')">FR</button>
+    <button onclick="setLang('en')">EN</button>
+  </div>
   <span class="logo-icon" role="img" aria-label="Budget"></span>
   <h1>Contact &amp; support</h1>
   <p>Contact &amp; Support</p>
 </header>
 
-<a class="back-link" href="index.html">‹ <span lang-section="fr">Accueil</span><span lang-section="en">Home</span></a>
-
-<div class="lang-toggle">
-  <button class="active" onclick="setLang('fr')">Français</button>
-  <button onclick="setLang('en')">English</button>
-</div>
+<a class="back-link" href="../index.html">‹ <span lang-section="fr">Accueil</span><span lang-section="en">Home</span></a>
 
 <!-- ═══════════════════════════════════════ FRANÇAIS ═══════════════════════ -->
 
@@ -117,6 +116,6 @@
 </div>
 </div>
 
-<script src="script.js"></script>
+<script src="../script.js"></script>
 </body>
 </html>
